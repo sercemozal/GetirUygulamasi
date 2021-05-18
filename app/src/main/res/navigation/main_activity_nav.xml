@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_activity_nav"
+    app:startDestination="@id/urunlerAnasayfaFragment">
+
+    <fragment
+        android:id="@+id/urunlerAnasayfaFragment"
+        android:name="com.sercem.getirodev.UrunlerAnasayfaFragment"
+        android:label="UrunlerAnasayfaFragment"
+        tools:layout="@layout/fragment_urunler_anasayfa">
+        <action
+            android:id="@+id/urunDetayGesis"
+            app:destination="@id/urunDetaySayfaFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/urunDetaySayfaFragment"
+        android:name="com.sercem.getirodev.UrunDetaySayfaFragment"
+        android:label="UrunDetaySayfaFragment"
+        tools:layout="@layout/fragment_urun_detay_sayfa">
+        <argument
+            android:name="urunNesne"
+            app:argType="com.sercem.getirodev.Urunler" />
+    </fragment>
+    <fragment
+        android:id="@+id/benFragment"
+        android:name="com.sercem.getirodev.BenFragment"
+        android:label="fragment_ben"
+        tools:layout="@layout/fragment_ben" />
+</navigation>
